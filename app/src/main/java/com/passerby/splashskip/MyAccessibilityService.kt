@@ -1,7 +1,6 @@
 package com.passerby.splashskip
 
 import android.accessibilityservice.AccessibilityService
-import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK
 
@@ -18,7 +17,6 @@ class MyAccessibilityService : AccessibilityService() {
                 source.getChild(i).performAction(ACTION_CLICK)
             }
         }
-        source.recycle()
     }
 
     override fun onInterrupt() {
